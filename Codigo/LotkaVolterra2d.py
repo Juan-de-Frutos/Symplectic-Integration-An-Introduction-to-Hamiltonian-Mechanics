@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-# --- 1. Definición del Integrador ---
 def stormer_verlet_lv(y, h):
     p, q = y[0], y[1]
     p_half = p + h / 2 * (np.exp(q) - 2)
@@ -18,7 +16,6 @@ def symplectic_euler_lv(y, h, F=None, dF=None):
     q_new = q + h * (1 - np.exp(p_new))
     return np.array([p_new, q_new])
 
-# --- 2. Funciones de Energía Exacta ---
 def I_exacta(u, v):
     return np.log(u) - u + 2 * np.log(v) - v
 def I_m(u,v,h):
@@ -41,7 +38,6 @@ def H_m(p,q,h):
 
 print("Iniciando simulación...")
 
-# Parámetros de la simulación
 CI = [[1.1, 2.1], [1.6, 2.6], [2.1, 3.1], [2.8, 3.8]]
 h = 0.1
 pasos = 400
