@@ -71,7 +71,7 @@ def poincare(q20, p20, H0, h=1e-3, n_cuts=400):
     U0 = V([0.0, q20])
     arg = 2*H0 - 2*U0 - p20**2
     if arg < 0:
-        return None            # <-- condición inicial NO permitida a esta energía
+        return None            
     p10 = np.sqrt(arg)
     y_actual = np.array([p10, p20, 0.0, q20])
     Poincare = []
@@ -96,7 +96,7 @@ plt.figure(figsize=(7, 7))
 for (q20, p20) in condiciones:
     cortes = poincare(q20, p20, 1/8)
     if cortes is not None:
-        plt.plot(cortes[:, 0], cortes[:, 1], '.', ms=1.5)   # un color por órbita
+        plt.plot(cortes[:, 0], cortes[:, 1], '.', ms=1.5)   
 plt.xlabel("$q_2$"); plt.ylabel("$p_2$")
 plt.title("Poincaré cuts - Hénon-Heiles Model - Implicit Euler. H=1/8 (Fig 3.3)")
 plt.gca().set_aspect('equal')        # que la curva no salga deformada
