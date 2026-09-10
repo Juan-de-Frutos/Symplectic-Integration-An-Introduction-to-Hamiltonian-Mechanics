@@ -1,1 +1,3 @@
 # Symplectic-Integration-An-Introduction-to-Hamiltonian-Mechanics
+En la carpeta de código se encuentra el código en Python de las distintas simulaciones numéricas. El programa principal de esta carpeta es el de "integradores.py" que se necesita para ejecutar el resto, ya que contiene las implementaciones de los distintos integradores numéricos que se utilizan para resolver los sistemas de los otros programas.
+En la carpeta de "Figuras" se encuentran algunos de los gráficos que he obtenido con los programas, aunque se podrían obtener muchos otros igual de interesantes. Estas figuras están presentes, junto con las respectivas explicaciones de cada sistema, en la memoria de mi estancia en el ICMAT
